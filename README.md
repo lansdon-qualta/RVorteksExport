@@ -10,3 +10,5 @@ library(RVorteksExport)
 df = data.frame(a=c(1,2,3,4,5), b=c(11,22,33,44,55))
 ExportDataframeToVorteks(df, "mydf")
 ```
+
+Note: A current version of Vorteks is required for this to work! (Later than 3/2021)
