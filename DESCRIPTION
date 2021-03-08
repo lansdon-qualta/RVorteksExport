@@ -4,8 +4,9 @@ Title: Export dataframe to Vorteks Visualization Environment
 Version: 0.1.0
 Author: Qualta Consulting, LLC.
 Maintainer: Lansdon Page <lpage@qualtacon.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Export dataframes and automatically start importing into 
+    Vorteks. VVE and VDM will start an import. VPE will start a new project and
+    add a file reader with the dataframe file already set.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

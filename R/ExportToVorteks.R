@@ -1,9 +1,37 @@
-#' Export dataframe to Vorteks Visualization Environment
+#' Export dataframe to Vorteks Visualization Environment (VVE)
 #' @export
 #' @param df dataframe variable
 #' @param filename name of exported file variable
 #' @importFrom utils write.table
-ExportDataframeToVorteks <- function(df, filename = "dataframe_export") {
+ExportDataframeToVVE <- function(df, filename = "dataframe_export") {
+  ExportDataframeToVorteks(df, ".vvedf", filename)
+}
+
+#' Export dataframe to Vorteks Data Manager (VDM)
+#' @export
+#' @param df dataframe variable
+#' @param filename name of exported file variable
+#' @importFrom utils write.table
+ExportDataframeToVDM <- function(df, filename = "dataframe_export") {
+  ExportDataframeToVorteks(df, ".vdmdf", filename)
+}
+
+#' Export dataframe to Vorteks Processing Environment (VPE)
+#' @export
+#' @param df dataframe variable
+#' @param filename name of exported file variable
+#' @importFrom utils write.table
+ExportDataframeToVPE <- function(df, filename = "dataframe_export") {
+  ExportDataframeToVorteks(df, ".vpedf", filename)
+}
+
+
+#' Export dataframe to Vorteks Visualization Environment
+#' @param df dataframe variable
+#' @param extension must be one of supported extensions (.vvedf, .vpedf, .vdmdf)
+#' @param filename name of exported file variable
+#' @importFrom utils write.table
+ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export") {
 
   # Validate dataframe arg
   if(missing(df) || is.null(df) || !is.data.frame(df))
@@ -37,5 +65,4 @@ ExportDataframeToVorteks <- function(df, filename = "dataframe_export") {
   {
     #    print(paste("Vorteks Export: ", path))
   })
-
 }

@@ -4,10 +4,12 @@
 \alias{ExportDataframeToVorteks}
 \title{Export dataframe to Vorteks Visualization Environment}
 \usage{
-ExportDataframeToVorteks(df, filename = "dataframe_export")
+ExportDataframeToVorteks(df, extension, filename = "dataframe_export")
 }
 \arguments{
 \item{df}{dataframe variable}
+
+\item{extension}{must be one of supported extensions (.vvedf, .vpedf, .vdmdf)}
 
 \item{filename}{name of exported file variable}
 }
