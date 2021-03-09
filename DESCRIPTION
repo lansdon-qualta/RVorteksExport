@@ -1,7 +1,7 @@
 Package: VorteksExport
 Type: Package
 Title: Export dataframe to Vorteks Visualization Environment
-Version: 0.1.0
+Version: 0.1.1
 Author: Qualta Consulting, LLC.
 Maintainer: Lansdon Page <lpage@qualtacon.com>
 Description: Export dataframes and automatically start importing into 
