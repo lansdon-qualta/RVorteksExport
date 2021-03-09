@@ -43,7 +43,7 @@ ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export
 
   check <- tryCatch({
     #create filename with vorteks dataframe extension
-    path <- paste(filename,".vvedf", sep = "")
+    path <- paste(filename, extension, sep = "")
 
     # Write dataframe to current working directory
     write.table(df, path, sep = ",", row.names = FALSE)
