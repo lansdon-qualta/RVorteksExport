@@ -1,5 +1,5 @@
 # RVorteksExport
-Export a dataframe to Vorteks Visualization Environment
+Export a dataframe to Vorteks (VVE, VDM or VPE)
 
 Example usage when importing the R package from github:
 ```
