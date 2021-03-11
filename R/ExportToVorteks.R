@@ -25,13 +25,16 @@ ExportDataframeToVPE <- function(df, filename = "dataframe_export") {
   ExportDataframeToVorteks(df, ".vpedf", filename)
 }
 
-
 #' Export dataframe to Vorteks Visualization Environment
 #' @param df dataframe variable
 #' @param extension must be one of supported extensions (.vvedf, .vpedf, .vdmdf)
 #' @param filename name of exported file variable
 #' @importFrom utils write.table
 ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export") {
+
+  # validate operating system
+  if(!IsWindows())
+    stop("Unsupported OS (Windows required)")
 
   # Validate dataframe arg
   if(missing(df) || is.null(df) || !is.data.frame(df))
@@ -65,4 +68,15 @@ ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export
   {
     #    print(paste("Vorteks Export: ", path))
   })
+}
+
+#' Test for Windows OS
+IsWindows <- function() {
+  if(Sys.info()[['sysname']] == 'Windows') {
+    print("OS: Windows")
+    return(TRUE)
+  } else {
+    print("OS: UNSUPPORTED (Windows required)")
+    return(FALSE)
+  }
 }

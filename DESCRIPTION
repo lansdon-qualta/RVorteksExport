@@ -1,7 +1,7 @@
 Package: VorteksExport
 Type: Package
-Title: Export dataframe to Vorteks Visualization Environment
-Version: 0.1.2
+Title: Export Dataframes to Vorteks
+Version: 0.1.3
 Author: Qualta Consulting, LLC.
 Maintainer: Lansdon Page <lpage@qualtacon.com>
 Description: Export dataframes and automatically start importing into 
@@ -14,3 +14,4 @@ RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Platform: Windows ONLY. Requires installation of Vorteks software.
