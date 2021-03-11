@@ -3,4 +3,4 @@
 export(ExportDataframeToVDM)
 export(ExportDataframeToVPE)
 export(ExportDataframeToVVE)
-importFrom(utils,write.table)
+importFrom(utils,write.csv)
