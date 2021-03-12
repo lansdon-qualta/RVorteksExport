@@ -44,11 +44,5 @@ test_that("missing filename has error", {
 
 #' Test for Windows OS
 IsWindows <- function() {
-  if(Sys.info()[['sysname']] == 'Windows') {
-    print("OS: Windows")
-    return(TRUE)
-  } else {
-    print("OS: UNSUPPORTED (Windows required)")
-    return(FALSE)
-  }
+  return(Sys.info()[['sysname']] == 'Windows')
 }

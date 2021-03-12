@@ -52,7 +52,9 @@ ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export
     write.csv(df, path, row.names = FALSE)
 
     # open saved file - Should open Vorteks if appropriate version is installed via file association
-    shell.exec(path)
+    vorteks_check <- try(silent = TRUE, {
+      shell.exec(path)
+    })
 
     print(paste("Vorteks Export:", path))
   },
@@ -73,10 +75,10 @@ ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export
 #' Test for Windows OS
 IsWindows <- function() {
   if(Sys.info()[['sysname']] == 'Windows') {
-    print("OS: Windows")
+#    print("OS: Windows")
     return(TRUE)
   } else {
-    print("OS: UNSUPPORTED (Windows required)")
+#    print("OS: UNSUPPORTED (Windows required)")
     return(FALSE)
   }
 }
