@@ -3,7 +3,7 @@ Export a dataframe to Vorteks (VVE, VDM or VPE)
 
 Example usage when importing the R package from github:
 ```
-install(devtools)
+install.packages("devtools")
 library(devtools)
 install_github('lansdon-qualta/RVorteksExport')
 library(VorteksExport)
