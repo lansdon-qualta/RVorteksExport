@@ -33,8 +33,8 @@ ExportDataframeToVPE <- function(df, filename = "dataframe_export") {
 ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export") {
 
   # validate operating system
-  if(!IsWindows())
-    stop("Unsupported OS (Windows required)")
+#  if(!IsWindows())
+#    stop("Unsupported OS (Windows required)")
 
   # Validate dataframe arg
   if(missing(df) || is.null(df) || !is.data.frame(df))
