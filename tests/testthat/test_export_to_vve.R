@@ -22,6 +22,7 @@ test_that("missing dataframe has error", {
 #> Test passed 😸
 
 test_that("missing filename has error", {
+  df = data.frame(a=c(1,2,3,4,5), b=c(11,22,33,44,55))
   expect_error(ExportDataframeToVVE(df, NULL), 'Invalid filename')
   expect_error(ExportDataframeToVVE(df, ""), 'Invalid filename')
   expect_error(ExportDataframeToVVE(df, df), 'Invalid filename')
