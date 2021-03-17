@@ -1,40 +1,53 @@
-#' Export dataframe to Vorteks Visualization Environment (VVE)
+#' Export dataframe to 'Vorteks Visualization Environment (VVE)'
+#'
+#' A .vvedf file will be written to the current working directory.
+#' In windows, the file will be executed in an attempt to launch 'Vorteks Visualization Environment (VVE)'
 #' @export
 #' @param df dataframe variable
 #' @param filename name of exported file variable
+#' @return (No return value, called to perform export process)
 #' @importFrom utils write.csv
 ExportDataframeToVVE <- function(df, filename = "dataframe_export") {
   ExportDataframeToVorteks(df, ".vvedf", filename)
 }
 
-#' Export dataframe to Vorteks Data Manager (VDM)
+#' Export dataframe to 'Vorteks Data Manager (VDM)'
+#'
+#' A .vdmdf file will be written to the current working directory.
+#' In windows, the file will be executed in an attempt to launch 'Vorteks Data Manager (VDM)'
 #' @export
 #' @param df dataframe variable
 #' @param filename name of exported file variable
+#' @return (No return value, called to perform export process)
 #' @importFrom utils write.csv
 ExportDataframeToVDM <- function(df, filename = "dataframe_export") {
   ExportDataframeToVorteks(df, ".vdmdf", filename)
 }
 
-#' Export dataframe to Vorteks Processing Environment (VPE)
+#' Export dataframe to 'Vorteks Processing Environment (VPE)'
+#'
+#' A .vpedf file will be written to the current working directory.
+#' In windows, the file will be executed in an attempt to launch 'Vorteks Processing Environment (VPE)'
 #' @export
 #' @param df dataframe variable
 #' @param filename name of exported file variable
+#' @return (No return value, called to perform export process)
 #' @importFrom utils write.csv
 ExportDataframeToVPE <- function(df, filename = "dataframe_export") {
   ExportDataframeToVorteks(df, ".vpedf", filename)
 }
 
-#' Export dataframe to Vorteks Visualization Environment
+#' Export dataframe to 'Vorteks'
+#'
+#' 'ExportDataframeToVorteks()' will write a file with specified extension
+#' to the current working directory.
+#' In windows, the file will be executed in an attempt to launch 'Vorteks' software.
 #' @param df dataframe variable
 #' @param extension must be one of supported extensions (.vvedf, .vpedf, .vdmdf)
 #' @param filename name of exported file variable
+#' @return (No return value, called to perform export process)
 #' @importFrom utils write.csv
 ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export") {
-
-  # validate operating system
-#  if(!IsWindows())
-#    stop("Unsupported OS (Windows required)")
 
   # Validate dataframe arg
   if(missing(df) || is.null(df) || !is.data.frame(df))
@@ -68,17 +81,6 @@ ExportDataframeToVorteks <- function(df, extension, filename = "dataframe_export
   },
   finally = function(f)
   {
-    #    print(paste("Vorteks Export: ", path))
   })
 }
 
-#' Test for Windows OS
-IsWindows <- function() {
-  if(Sys.info()[['sysname']] == 'Windows') {
-#    print("OS: Windows")
-    return(TRUE)
-  } else {
-#    print("OS: UNSUPPORTED (Windows required)")
-    return(FALSE)
-  }
-}

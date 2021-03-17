@@ -2,7 +2,7 @@
 % Please edit documentation in R/ExportToVorteks.R
 \name{ExportDataframeToVDM}
 \alias{ExportDataframeToVDM}
-\title{Export dataframe to Vorteks Data Manager (VDM)}
+\title{Export dataframe to 'Vorteks Data Manager (VDM)'}
 \usage{
 ExportDataframeToVDM(df, filename = "dataframe_export")
 }
@@ -11,6 +11,10 @@ ExportDataframeToVDM(df, filename = "dataframe_export")
 
 \item{filename}{name of exported file variable}
 }
+\value{
+(No return value, called to perform export process)
+}
 \description{
-Export dataframe to Vorteks Data Manager (VDM)
+A .vdmdf file will be written to the current working directory.
+In windows, the file will be executed in an attempt to launch 'Vorteks Data Manager (VDM)'
 }

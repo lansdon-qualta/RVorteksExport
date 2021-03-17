@@ -2,7 +2,7 @@
 % Please edit documentation in R/ExportToVorteks.R
 \name{ExportDataframeToVorteks}
 \alias{ExportDataframeToVorteks}
-\title{Export dataframe to Vorteks Visualization Environment}
+\title{Export dataframe to 'Vorteks'}
 \usage{
 ExportDataframeToVorteks(df, extension, filename = "dataframe_export")
 }
@@ -13,6 +13,11 @@ ExportDataframeToVorteks(df, extension, filename = "dataframe_export")
 
 \item{filename}{name of exported file variable}
 }
+\value{
+(No return value, called to perform export process)
+}
 \description{
-Export dataframe to Vorteks Visualization Environment
+'ExportDataframeToVorteks()' will write a file with specified extension
+to the current working directory.
+In windows, the file will be executed in an attempt to launch 'Vorteks' software.
 }

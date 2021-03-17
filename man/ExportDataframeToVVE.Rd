@@ -2,7 +2,7 @@
 % Please edit documentation in R/ExportToVorteks.R
 \name{ExportDataframeToVVE}
 \alias{ExportDataframeToVVE}
-\title{Export dataframe to Vorteks Visualization Environment (VVE)}
+\title{Export dataframe to 'Vorteks Visualization Environment (VVE)'}
 \usage{
 ExportDataframeToVVE(df, filename = "dataframe_export")
 }
@@ -11,6 +11,10 @@ ExportDataframeToVVE(df, filename = "dataframe_export")
 
 \item{filename}{name of exported file variable}
 }
+\value{
+(No return value, called to perform export process)
+}
 \description{
-Export dataframe to Vorteks Visualization Environment (VVE)
+A .vvedf file will be written to the current working directory.
+In windows, the file will be executed in an attempt to launch 'Vorteks Visualization Environment (VVE)'
 }

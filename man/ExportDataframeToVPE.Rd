@@ -2,7 +2,7 @@
 % Please edit documentation in R/ExportToVorteks.R
 \name{ExportDataframeToVPE}
 \alias{ExportDataframeToVPE}
-\title{Export dataframe to Vorteks Processing Environment (VPE)}
+\title{Export dataframe to 'Vorteks Processing Environment (VPE)'}
 \usage{
 ExportDataframeToVPE(df, filename = "dataframe_export")
 }
@@ -11,6 +11,10 @@ ExportDataframeToVPE(df, filename = "dataframe_export")
 
 \item{filename}{name of exported file variable}
 }
+\value{
+(No return value, called to perform export process)
+}
 \description{
-Export dataframe to Vorteks Processing Environment (VPE)
+A .vpedf file will be written to the current working directory.
+In windows, the file will be executed in an attempt to launch 'Vorteks Processing Environment (VPE)'
 }

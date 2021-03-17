@@ -1,12 +1,29 @@
-This is the first submission of this package to cran.
+RESUBMISSION
 
-NOTES:
-Possibly mis-spelled words in DESCRIPTION:
-  VDM (8:22)
-  VPE (8:48)
-  VVE (8:14)
-  Vorteks (3:29, 8:5, 10:53)
+- Please rather use the Authors@R field and declare Maintainer, Authors 
+and Contributors with their appropriate roles with person() calls.
+FIXED
 
-VDM, VPE, VVE, Vorteks are all names of applications that this package is designed to export dataframes to.
+- Please always write package names, software names and API (application 
+programming interface) names in single quotes in title and description. 
+FIXED
 
-Note about platform: The above mentioned applications are Windows only applications. Thus this package does not perform any useful functionality unless you are on Windows. There's no way to avoid the Windows only platform. The package is written such that it will install and run on other platforms, but the exported files will not open in the Vorteks software like they do on Windows.
+- Please always explain all acronyms in the description text.
+FIXED
+
+- Please add () behind all function names in the description texts 
+(DESCRIPTION file). e.g: --> example()
+Did not find instances of this?
+
+- Please add \value to .Rd files regarding exported methods and explain 
+the functions results in the documentation. Please write about the 
+structure of the output (class) and also what the output means. (If a 
+function does not return a value, please document that too, e.g. 
+\value{No return value, called for side effects} or similar)
+Missing Rd-tags:
+      ExportDataframeToVDM.Rd: \value
+      ExportDataframeToVorteks.Rd: \value
+      ExportDataframeToVPE.Rd: \value
+      ExportDataframeToVVE.Rd: \value
+
+FIXED
